@@ -1,0 +1,70 @@
+# Project: Psuedo Code Translator!
+# Makefile created by Dev-C++ 5.7.1
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o mainframe.o dialog_operation.o frame_var.o dialog_if.o dialog_loop.o func_dialog.o struct_dialog.o class_dialog.o control.o start_dialog.o dialog_cin.o dialog_cout.o call_dialog.o dialog_include.o
+LINKOBJ  = main.o mainframe.o dialog_operation.o frame_var.o dialog_if.o dialog_loop.o func_dialog.o struct_dialog.o class_dialog.o control.o start_dialog.o dialog_cin.o dialog_cout.o call_dialog.o dialog_include.o
+LIBS     = -L"C:/Program Files/Dev-Cpp/MinGW64/lib" -L"C:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -mwindows -Wl,--subsystem,windows -mwindows -lwxmsw -lstdc++ -lgcc -lodbc32 -lwsock32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lctl3d32 -ladvapi32 -lopengl32 -lglu32 -lole32 -loleaut32 -luuid
+INCS     = -I"C:/Program Files/Dev-Cpp/MinGW64/include" -I"C:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Program Files/Dev-Cpp/MinGW64/include" -I"C:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"C:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
+BIN      = csproject.exe
+CXXFLAGS = $(CXXINCS) -DWINVER=0x0400 -D__WIN95__ -D__GNUWIN32__ -D__WIN32__ -DHAVE_W32API_H  -D__WXMSW__ -D__WINDOWS__ -Wall -fno-pcc-struct-return -O2 -Os -fno-rtti -fno-exceptions
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+mainframe.o: mainframe.cpp
+	$(CPP) -c mainframe.cpp -o mainframe.o $(CXXFLAGS)
+
+dialog_operation.o: dialog_operation.cpp
+	$(CPP) -c dialog_operation.cpp -o dialog_operation.o $(CXXFLAGS)
+
+frame_var.o: frame_var.cpp
+	$(CPP) -c frame_var.cpp -o frame_var.o $(CXXFLAGS)
+
+dialog_if.o: dialog_if.cpp
+	$(CPP) -c dialog_if.cpp -o dialog_if.o $(CXXFLAGS)
+
+dialog_loop.o: dialog_loop.cpp
+	$(CPP) -c dialog_loop.cpp -o dialog_loop.o $(CXXFLAGS)
+
+func_dialog.o: func_dialog.cpp
+	$(CPP) -c func_dialog.cpp -o func_dialog.o $(CXXFLAGS)
+
+struct_dialog.o: struct_dialog.cpp
+	$(CPP) -c struct_dialog.cpp -o struct_dialog.o $(CXXFLAGS)
+
+class_dialog.o: class_dialog.cpp
+	$(CPP) -c class_dialog.cpp -o class_dialog.o $(CXXFLAGS)
+
+control.o: control.cpp
+	$(CPP) -c control.cpp -o control.o $(CXXFLAGS)
+
+start_dialog.o: start_dialog.cpp
+	$(CPP) -c start_dialog.cpp -o start_dialog.o $(CXXFLAGS)
+
+dialog_cin.o: dialog_cin.cpp
+	$(CPP) -c dialog_cin.cpp -o dialog_cin.o $(CXXFLAGS)
+
+dialog_cout.o: dialog_cout.cpp
+	$(CPP) -c dialog_cout.cpp -o dialog_cout.o $(CXXFLAGS)
+
+call_dialog.o: call_dialog.cpp
+	$(CPP) -c call_dialog.cpp -o call_dialog.o $(CXXFLAGS)
+
+dialog_include.o: dialog_include.cpp
+	$(CPP) -c dialog_include.cpp -o dialog_include.o $(CXXFLAGS)
