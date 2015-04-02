@@ -14,4 +14,7 @@ Psuedo Code Translator - 12th std. Final Project  By Arjun Rao and Sriram Desai 
 - Extract Source Code.zip and open cs_proj12.dev 
 - Compile and Run project from DevC++
 
+The official page for this project can be found here
+http://khmd.github.io/Pseudo-code-Translator.
+
 Refer to Documentation for details on working/usage
